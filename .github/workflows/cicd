@@ -1,16 +1,14 @@
-name: Maven Package
-
+name: boardgame-project
 on:
   push:
-    branches
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    runs-on: self-hosted
+
 
     steps:
     - uses: actions/checkout@v4
