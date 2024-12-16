@@ -87,4 +87,4 @@ jobs:
       run: |
         kubectl create -f deployment-service.yaml 
         kubectl describe deployment deployment-service
-        kubectl get svc -n webapps
+        kubectl get svc -n webapps 
