@@ -86,5 +86,5 @@ jobs:
     - name: applying deployment and service
       run: |
         kubectl create -f deployment-service.yaml 
-        kubectl describe deployment deployment-service
+        kubectl describe deployment boardgame-deployment -n webapps
         kubectl get svc -n webapps   
