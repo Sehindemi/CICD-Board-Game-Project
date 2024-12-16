@@ -64,4 +64,5 @@ jobs:
       run: |
         docker build -t sehindemitech/boardgames:latest . 
 
-
+    - name: image scan 
+      run: trivy image --format table -o trivy-image-report.html
