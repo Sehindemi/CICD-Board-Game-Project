@@ -32,6 +32,6 @@ jobs:
         path: target/*.jar
 
     - name: trivy file scan
-      run: trivy fs --format-table -o trviy-fs-report.html . 
+      run: trivy fs --format table -o trviy-fs-report.html . 
 
       
