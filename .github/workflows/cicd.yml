@@ -42,7 +42,7 @@ jobs:
     
     - name: install JQ 
       run: |
-        sudo apt-get update - y
+        sudo apt-get update -y
         sudo apt-get upgrade -y
         sudo apt install jq 
 
