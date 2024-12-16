@@ -76,4 +76,12 @@ jobs:
     - name: docker push images
       run: |
         docker push sehindemitech/boardgames:latest 
-        
+
+    - name: kubectl actions 
+      uses: tale/kubectl-action@v1
+      with:
+        base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+    
+    
+    - name: applying deployment and service
+      run: kubectl create -f deployment-service.yaml -n webapps
