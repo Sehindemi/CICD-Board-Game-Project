@@ -34,4 +34,9 @@ jobs:
     - name: trivy file scan
       run: trivy fs --format table -o trviy-fs-report.html . 
 
+    - name: SonarQube scan code quality check
+      uses:  sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL}}
       
