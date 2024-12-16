@@ -44,7 +44,7 @@ jobs:
       run: |
         sudo apt-get update - y
         sudo apt-get upgrade -y
-        sudo apt install jq -y
+        sudo apt install jq 
 
     - name: sonarqube quality gate status 
       id: sonarqube-quality-gate-check
