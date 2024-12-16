@@ -84,4 +84,7 @@ jobs:
     
     
     - name: applying deployment and service
-      run: kubectl create -f deployment-service.yaml -n webapps
+      run: |
+        kubectl create -f deployment-service.yaml 
+        kubectl describe deployment deployment-service
+        kubectl get svc -n webapps
